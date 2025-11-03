@@ -5,9 +5,6 @@ COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose Render's port
 EXPOSE 5000
 
-# Use Gunicorn for stable deployment
-CMD ["gunicorn", "--bind", "0.0.0.0:${PORT}", "app:app"]
-
+CMD ["gunicorn", "--bind", "0.0.0.0:${PORT}", "--access-logfile", "-", "--error-logfile", "-", "app:app"]
