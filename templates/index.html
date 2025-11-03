@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Popularity Classifier</title>
+  <style>
+    body {font-family: Arial; background: #222; color: #eee; text-align: center;}
+    form {background: #333; padding: 20px; display: inline-block; border-radius: 8px;}
+    input {margin: 8px; padding: 6px; width: 180px; border: none; border-radius: 4px;}
+    button {padding: 10px 20px; background: #1DB954; border: none; color: white; border-radius: 4px; font-weight: bold;}
+    label {display:block; margin-top:10px;}
+  </style>
+</head>
+<body>
+  <h1>🎧 Spotify Popularity Classifier</h1>
+  <form action="/predict" method="post">
+    <label>Danceability: <input type="number" step="any" name="danceability" required></label>
+    <label>Energy: <input type="number" step="any" name="energy" required></label>
+    <label>Key: <input type="number" step="any" name="key" required></label>
+    <label>Loudness: <input type="number" step="any" name="loudness" required></label>
+    <label>Mode: <input type="number" step="any" name="mode" required></label>
+    <label>Speechiness: <input type="number" step="any" name="speechiness" required></label>
+    <label>Acousticness: <input type="number" step="any" name="acousticness" required></label>
+    <label>Instrumentalness: <input type="number" step="any" name="instrumentalness" required></label>
+    <label>Liveness: <input type="number" step="any" name="liveness" required></label>
+    <label>Valence: <input type="number" step="any" name="valence" required></label>
+    <label>Tempo: <input type="number" step="any" name="tempo" required></label>
+    <label>Duration_ms: <input type="number" step="any" name="duration_ms" required></label>
+    <label>Time_signature: <input type="number" step="any" name="time_signature" required></label>
+
+    <button type="submit">Predict Popularity</button>
+  </form>
+</body>
+</html>
